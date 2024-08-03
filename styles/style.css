@@ -170,3 +170,101 @@ span{
     top: -2px;
     left: 25px;
 }
+/* Banner Section Styles ends here */
+
+/* Change Your Habits Section Styles starts here */
+.change-your-habits-section{
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+.change-your-habits-section-title{
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 8rem 0 1.5rem;
+}
+.change-your-habits-section-description{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+    font-weight: 400;
+    width: 60%;
+    margin: 0 auto;
+}
+.change-your-habits-section-image{
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 5rem;
+}
+.image-1 > img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.image-1 > h3{
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.image-1 > p{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 0 15px;
+}
+
+/* Media Query For >= 576px device "Header Section" */
+@media screen and (max-width:576px) {
+    .banner-section{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .banner-section-title{
+        font-size: 3rem;
+    }
+    span{
+        font-size: 3.5rem;
+    }
+    .banner-section-description{
+        font-size: 1rem;
+    }
+    .banner-section-image{
+        position: relative;
+        left: 50px;
+    }
+    .menu-bar{
+        display: block;
+        cursor: pointer;
+    }
+    .menu-bar .line{
+        width: 30px;
+        height: 3px;
+        background-color: #fefefe;
+        margin: 6px 0 ;
+    }
+    .navbar-item{
+        display: none;
+    }
+    .change-your-habits-section-title{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+    .change-your-habits-section-description{
+        width: 100%;
+    }
+
+    .change-your-habits-section-image{
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+        padding-top:40px ;
+    }
+    .image-1>h3{
+        margin: 5px 0 0;
+    }
+
+    
+}
