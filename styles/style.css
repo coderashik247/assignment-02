@@ -181,13 +181,14 @@ span{
     margin: 0 auto;
     text-align: center;
 }
-.change-your-habits-section-title, .run-extra-mile-section-title{
+.change-your-habits-section-title, .run-extra-mile-section-title, .meet-our-section-title{
     color: rgb(255, 255, 255);
     font-size: 3rem;
     font-weight: 900;
     margin: 8rem 0 1.5rem;
 }
-.change-your-habits-section-description, .run-extra-mile-section-description{
+.change-your-habits-section-description, .run-extra-mile-section-description,
+.meet-our-section-description{
     color: rgba(255, 255, 255, 0.5);
     font-size: 1rem;
     font-weight: 400;
@@ -281,6 +282,73 @@ span{
 }
 /* Run-Extra-Mile Section Styles ends here */
 
+/* Meet-Our-Team Section Styles starts here */
+.meet-our-team-section-content{
+    text-align: center;
+}
+.meet-our-team-section-image{
+    width: 77%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 20px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 1rem;
+    position: relative;
+}
+.trainer-image-box{
+    width: 440px;
+    height: 300px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.01);
+}
+.trainer-image{
+    width: 445px;
+    height: 280px;
+    padding: 0 00px 20px 20px;
+    background-color: rgba(255, 255, 255, 0.01);
+    border-radius: 1rem;
+
+}
+.one, .two, .three{
+    padding-top: 20px;
+}
+.trainer-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.trainer-name{
+    color: #fefefe;
+    position: absolute;
+    background-color: rgba(0,0,0,.001);
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 0;
+    width: 200px;
+    
+}
+.trainer-box{
+    position: absolute;
+    top: 70%;
+    left: 12%;
+    gap: 20px;
+    background-color: rgba(0,0,0,.001);
+
+}
+
+.trainer{
+    margin-top: 35px;
+    background-color: rgba(0,0,0,.001);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Meet-Our-Team Section Styles ends here */
+
+
 /* Media Query For >= 576px device "Header Section" */
 @media screen and (max-width:576px) {
     .banner-section{
@@ -362,10 +430,26 @@ span{
     .run-extra-mile-section-image > img{
         width: 100%;
         position: relative;
-        right: 30px; 
+        right: 30px;    
+    }
+    .meet-our-team-section-image{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .trainer-image-box{
         
     }
-    
+    .trainer-image{
+        width: 360px;
+        height: 280px;
+    }
 
+    
+}
+
+@media screen and (max-width:500px) {
+    .trainer-image{
+        width: 320px;
+        height: 280px;
+    }
     
 }
