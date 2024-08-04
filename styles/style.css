@@ -56,6 +56,7 @@ header{
     background: rgb(230, 83, 60);
 }
 .active{
+    border: 1px solid rgb(230, 83, 60) ;
     background: rgb(230, 83, 60);
 }
 /* Navbar Section Styles ends here */
@@ -101,6 +102,9 @@ span{
     position: relative;
     left: -100px;
 }
+.banner-section-image img{
+    width: 100%;
+}
 
 .box-1{
     width: 206px;
@@ -125,11 +129,10 @@ span{
 }
 .box-1 > h3{
     display: inline;
-    color: rgb(250, 250, 249);
+    color: rgb(255, 255, 255);
     font-size: 24px;
     font-weight: 900;
     background-color: rgba(48, 48, 48);
-    opacity: 0.54;
     position: relative;
     top: -25px;
     left: 58px;
@@ -163,7 +166,7 @@ span{
     font-weight: 900;
     margin: 10px;
     background-color: rgba(48, 48, 48);
-    opacity: 0.54;
+
     padding-left: 1rem;
 }
 .box-2>p{
@@ -178,16 +181,18 @@ span{
     margin: 0 auto;
     text-align: center;
 }
-.change-your-habits-section-title{
+.change-your-habits-section-title, .run-extra-mile-section-title{
     color: rgb(255, 255, 255);
     font-size: 3rem;
     font-weight: 900;
     margin: 8rem 0 1.5rem;
 }
-.change-your-habits-section-description{
+.change-your-habits-section-description, .run-extra-mile-section-description{
     color: rgba(255, 255, 255, 0.5);
     font-size: 1rem;
     font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
     width: 60%;
     margin: 0 auto;
 }
@@ -198,11 +203,19 @@ span{
     grid-template-columns: repeat(4, 1fr);
     padding-top: 5rem;
 }
-.image-1 > img{
-    height: 200px;
-    width: 200px;
+.image-box{
+    max-height: 230px;
+    max-width: 230px;
+    /* border: 1px solid tomato; */
+    /* padding-left: 55px; */
+    margin-left: 55px;
+    margin-bottom: 20px;
+}
+.image-box > img{
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 100%;
 }
 .image-1 > h3{
     color: rgb(255, 255, 255);
@@ -214,8 +227,59 @@ span{
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
+    letter-spacing: 0.5px;
     padding: 0 15px;
 }
+/* Change Your Habits Section Styles ends here */
+
+/* Run-Extra-Mile Section Styles starts here */
+.run-extra-mile-section{
+    width: 70%;
+    display: flex;
+    margin: 6rem auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: rgb(34, 34, 34);
+    /* border: 1px solid tomato; */
+}
+.run-extra-mile-section-content{
+    width: 50%;
+    background-color: rgb(34, 34, 34);
+}
+.run-extra-mile-section-title{
+    margin-top: 0px;
+    /* padding-right: 350px; */
+    /* width: 50%; */
+    background-color: rgb(34, 34, 34);
+}
+.run-extra-mile-section-description{
+    width: 70%;
+    margin: 0px;
+    background-color: rgb(34, 34, 34);
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+}
+.run-extra-mile-section-content > button{
+    margin-top: 30px;
+    width: 220px;
+}
+.run-extra-mile-section-image{
+    height: 312px;
+    width: 420px;
+    padding: 50px 0 50px 60px;
+    /* position: relative; */
+    /* left: 60px; */
+    /* top: 50px; */
+    background-color: rgb(34, 34, 34);
+}
+.run-extra-mile-section-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+/* Run-Extra-Mile Section Styles ends here */
 
 /* Media Query For >= 576px device "Header Section" */
 @media screen and (max-width:576px) {
@@ -249,7 +313,16 @@ span{
     .navbar-item{
         display: none;
     }
-    .change-your-habits-section-title{
+    .box-1{
+        bottom: 5.5rem;
+        left: -6rem;
+    }
+    .box-2{
+        
+        top: 3rem;
+        right: -2rem;
+    }
+    .change-your-habits-section-title,.run-extra-mile-section-title{
         font-size: 2.5rem;
         margin-top: 2rem;
     }
@@ -265,6 +338,34 @@ span{
     .image-1>h3{
         margin: 5px 0 0;
     }
+
+    .run-extra-mile-section{
+        width: 95%;
+        flex-direction: column;
+        margin: 30px 20px;
+    }
+    .run-extra-mile-section-content{
+        width: 80%;  
+         
+    }
+    .run-extra-mile-section-title{
+        width: 80%;
+    }
+    .run-extra-mile-section-description{
+        width: 100%;
+    }
+    .run-extra-mile-section-image{
+        width: 365px;
+        height: 250px;
+        
+    }
+    .run-extra-mile-section-image > img{
+        width: 100%;
+        position: relative;
+        right: 30px; 
+        
+    }
+    
 
     
 }
