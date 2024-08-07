@@ -181,14 +181,15 @@ span{
     margin: 0 auto;
     text-align: center;
 }
-.change-your-habits-section-title, .run-extra-mile-section-title, .meet-our-section-title{
+.change-your-habits-section-title, .run-extra-mile-section-title, .meet-our-section-title
+,.BMI-calculator-title{
     color: rgb(255, 255, 255);
     font-size: 3rem;
     font-weight: 900;
     margin: 8rem 0 1.5rem;
 }
 .change-your-habits-section-description, .run-extra-mile-section-description,
-.meet-our-section-description{
+.meet-our-section-description,.BMI-calculator-description{
     color: rgba(255, 255, 255, 0.5);
     font-size: 1rem;
     font-weight: 400;
@@ -345,12 +346,114 @@ span{
     font-size: 16px;
     font-weight: 500;
 }
+/* BMI-calculator-section styles starts here */
+.BMI-calculator-section{
+    text-align: center;
+}
+.bgc-BMI{
+    background: rgb(34, 34, 34); 
+    margin: 80px 0 100px;
+}
+.BMI-calculator-section-part{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(34, 34, 34);
+    width: 78%;
+    margin: 0 auto;
+}
+.BMI-chart-section{
+    text-align: left;
+    background: rgb(34, 34, 34);
+}
+.BMI-chart-section > h3{
+    margin-top: 10px;
+}
+.BMI-chart-section > h3, .calculate-BMI-section > h3{
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    font-weight: 900;
+    background: rgb(34, 34, 34);
+}
+.calculate-BMI-section > h3{
+    margin-top: 100px;
+}
+.calculate-BMI-section{
+    text-align: left;
+    background: rgb(34, 34, 34);
+}
+.calculate-BMI-section > p{
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    background: rgb(34, 34, 34);
+}
+table{
+    border-collapse: collapse;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+tr, th, td{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 15px 40px;
+    background: rgb(34, 34, 34);
+}
+input[type="number"],.gender{
+    width: 280px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 10px 10px 10px 0;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 25px;
+}
+.gender{
+    width: 310px;
+    height: 54px;
+    color: rgba(255, 255, 255, 0.3);
+    
+}
+.activity-factor{
+    width: 635px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 10px 10px 0;
+    color: rgba(255, 255, 255, 0.3);
+    padding-left: 25px;
+}
+.calculate-btn{
+    margin: 10px 0 50px;
+    padding: 15px 60px;
+}
+/* BMI-calculator-section styles ends here */
+
+
+.BMI-calculator-section,.calculate-BMI-section{
+    color: #fff;
+}
+select{
+    color: rgba(255, 255, 255, 0.5);
+}
 
 /* Meet-Our-Team Section Styles ends here */
 
 
 /* Media Query For >= 576px device "Header Section" */
 @media screen and (max-width:576px) {
+    
     .banner-section{
         flex-direction: column;
         gap: 3rem;
@@ -435,18 +538,40 @@ span{
     .meet-our-team-section-image{
         grid-template-columns: repeat(1,1fr);
     }
-    .trainer-image-box{
-        
-    }
     .trainer-image{
         width: 360px;
         height: 280px;
+    }
+   
+    .BMI-calculator-section-part{
+        flex-direction: column;
+    }
+    .calculate-BMI-section{
+        margin-left: 35px;
+    }
+    input[type="number"],.gender{
+        width: 170px;
+    }
+    .gender{
+        width: 199px;
+    }
+    .activity-factor{
+        width: 415px;
     }
 
     
 }
 
 @media screen and (max-width:500px) {
+    .box-2{
+        width: 170px;
+        /* height: 80px; */
+        top: 3rem;
+        right: -.5rem;
+    }
+    .box-2 >p{
+        font-size: 14px;
+    }
     .trainer-image{
         width: 320px;
         height: 280px;
