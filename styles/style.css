@@ -182,14 +182,14 @@ span{
     text-align: center;
 }
 .change-your-habits-section-title, .run-extra-mile-section-title, .meet-our-section-title
-,.BMI-calculator-title{
+,.BMI-calculator-title,.our-price-section-title{
     color: rgb(255, 255, 255);
     font-size: 3rem;
     font-weight: 900;
     margin: 8rem 0 1.5rem;
 }
 .change-your-habits-section-description, .run-extra-mile-section-description,
-.meet-our-section-description,.BMI-calculator-description{
+.meet-our-section-description,.BMI-calculator-description,.our-price-section-description{
     color: rgba(255, 255, 255, 0.5);
     font-size: 1rem;
     font-weight: 400;
@@ -500,11 +500,83 @@ footer >p {
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 0.3px;
-    background: rgba(255, 255, 255, 0.001);
+    background-color: rgba(255, 255, 255, 0.001);
     padding-bottom: 40px;
     text-align: center;
 }
 /* Meet-Our-Team Section Styles ends here */
+
+/* Our Pricing Section Styles starts here */
+.our-price-section-title{
+    text-align: center;
+}
+.our-price-section-description{
+    text-align: center;
+}
+.our-price-section-chart{
+    width: 78%;
+    margin: 0 auto;
+}
+.grid-price{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4rem;
+}
+.price-card{
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, .1);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s;
+    transition: transform;
+}
+.price-card:hover{
+    background-color: rgba(255, 255, 255, .4);
+    border-color: rgb(230, 83, 60);
+    transform: scale(1.1,1.1);
+}
+.price-card-content{
+    flex: 1;
+    margin-bottom: 2rem;
+    background-color: rgba(255, 255, 255, .001);
+}
+.price-card h4{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, .001);
+}
+.price-card h3{
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600px;
+    color: rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid #fff;
+    background-color: rgba(255, 255, 255, .001);
+}
+.price-card p{
+    margin-bottom: .75rem;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, .001);
+}
+.price-card p i{
+    margin-right: .5rem;
+    font-size: 1.2rem;
+    color: rgb(230, 83, 60);
+}
+.btn-price{
+    margin-top: 15px;
+    margin-left: 0px;
+}
+/* .btn-price:hover{
+    background-color: rgba(255, 255, 255, .1);
+} */
+/* Our Pricing Section Styles ends here */
 
 
 /* Media Query For >= 576px device "Header Section" */
@@ -622,6 +694,9 @@ footer >p {
     }
     .footer-one > ul{
         padding: 0;
+    }
+    .grid-price{
+        grid-template-columns: repeat(1,1fr);
     }
 
     
