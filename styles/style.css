@@ -404,8 +404,22 @@ tr, th, td{
     padding: 15px 40px;
     background: rgb(34, 34, 34);
 }
-input[type="number"],.gender{
-    width: 280px;
+form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.0001);
+}
+input, select{
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.01);
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 8px;
+}
+input[type="number"]{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* width: 280px;
     height: 50px;
     font-size: 16px;
     font-weight: 400;
@@ -414,16 +428,19 @@ input[type="number"],.gender{
     border: 1px solid rgba(255, 255, 255, 0.1);
     margin: 10px 10px 10px 0;
     color: rgba(255, 255, 255, 0.6);
-    padding-left: 25px;
+    padding-left: 25px; */
 }
 .gender{
-    width: 310px;
-    height: 54px;
+    /* width: 310px;
+    height: 54px; */
     color: rgba(255, 255, 255, 0.3);
-    
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .activity-factor{
-    width: 635px;
+    grid-column: span 2;
+    color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* width: 635px;
     height: 56px;
     font-size: 16px;
     font-weight: 400;
@@ -432,7 +449,7 @@ input[type="number"],.gender{
     background: rgba(255, 255, 255, 0.1);
     margin: 10px 10px 10px 0;
     color: rgba(255, 255, 255, 0.3);
-    padding-left: 25px;
+    padding-left: 25px; */
 }
 .calculate-btn{
     margin: 10px 0 50px;
@@ -579,7 +596,58 @@ footer >p {
 /* Our Pricing Section Styles ends here */
 
 
-/* Media Query For >= 576px device "Header Section" */
+/* Media Query For >= 576px device */
+@media screen and (max-width:375px) {
+    body{
+        border: 2px solid tomato;
+    }
+    .navbar-section{
+        width: 100%;
+    }
+    .join, .download{
+        padding: 10px 9px;
+        font-size: 18px;
+    }
+    .banner-section-image{
+        border: 1px solid red;
+        position: relative;
+        left: -4px;
+    }
+    .box-1{
+        bottom: 4rem;
+        left: 0rem;
+        border: 1px solid red;
+    }
+    
+}
+@media screen and (min-width:376px) and (max-width:500px) {
+    body{
+        border: 1px solid blue;
+    }
+    .box-2{
+        width: 170px;
+        /* height: 80px; */
+        top: 3rem;
+        right: -.5rem;
+    }
+    .box-2 >p{
+        font-size: 14px;
+    }
+    .trainer-image{
+        width: 320px;
+        height: 280px;
+    }
+    .trainer-image{
+        width: 320px;
+        height: 280px;
+    }
+    input,form{
+        padding: 10px 0px;
+    }
+    
+}
+
+
 @media screen and (max-width:576px) {
     
     .banner-section{
@@ -674,7 +742,13 @@ footer >p {
     .BMI-calculator-section-part{
         flex-direction: column;
     }
-    .calculate-BMI-section{
+    .calculate-BMI-section {
+        margin-left: 25px;
+    }
+    input, select{
+        padding: 10px 10px;
+    }
+    /* .calculate-BMI-section{
         margin-left: 35px;
     }
     input[type="number"],.gender{
@@ -685,7 +759,7 @@ footer >p {
     }
     .activity-factor{
         width: 415px;
-    }
+    } */
     .footer-section{
         grid-template-columns: repeat(1,1fr);
     }
@@ -702,19 +776,4 @@ footer >p {
     
 }
 
-@media screen and (max-width:500px) {
-    .box-2{
-        width: 170px;
-        /* height: 80px; */
-        top: 3rem;
-        right: -.5rem;
-    }
-    .box-2 >p{
-        font-size: 14px;
-    }
-    .trainer-image{
-        width: 320px;
-        height: 280px;
-    }
-    
-}
+
